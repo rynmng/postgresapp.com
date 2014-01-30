@@ -21,8 +21,10 @@ When Postgres.app first starts up, it creates the $USER database, which is the d
 PostgreSQL ships with a constellation of useful binaries, like `pg_dump` or `pg_restore`, that you will likely want to use. Go ahead and add the `/bin` directory that ships with Postgres.app to your `PATH` (preferably in `.profile`, `.bashrc`, `.zshrc`, or the like to make sure this gets set for every Terminal session):
 
 ```bash
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+PATH="/Applications/[NAME OF POSTGRES.APP]/Contents/MacOS/bin:$PATH"
 ```
+
+Make sure to replace `[NAME OF POSTGRES.APP]` with the current name of the application, for example, `Postgres93.app`.
 
 Once your path is correctly set up, you should be able to run `psql` without a host. (If not, check that the correct version is being loaded in the `PATH` by doing `which psql`)
 
